@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trabajos — Cristina Mora Pérez</title>
+<meta name="description" content="Cristina Mora Pérez, montadora y coordinadora de postproducción en Barcelona. Trabajos, showreel y experiencia en ficción, documental y videoclip.">
+<meta name="theme-color" content="#f2ede3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ------------------------------------------------------------------
+     Tokens
+     Dos tipografías: Space Grotesk (títulos) y Courier Prime (texto)
+     ------------------------------------------------------------------ */
+  :root {
+    --ink: #141414;
+    --ink-2: #3d3d3d;
+    --ink-3: #5c5c5c;
+
+    /* fondos pastel de cada sección */
+    --paper: #f2ede3;          /* Trabajos */
+    --lilac: #d4cdf6;          /* Showreel */
+    --mint: #cce7dd;           /* Sobre mí */
+    --page: var(--paper);
+
+    --rec: #ff3b30;
+
+    /* timeline estilo Avid Media Composer */
+    --avid-bg: #2b2b2b;
+    --avid-panel: #3a3a3a;
+    --avid-lane: #323232;
+    --avid-line: #1e1e1e;
+    --avid-text: #c9c9c9;
+    --avid-dim: #8c8c8c;
+    --avid-video: #9a9fe0;
+    --avid-video-edge: #5d62b0;
+    --avid-audio: #79c7ad;
+    --avid-audio-edge: #3f8a72;
+    --avid-pos: #e0453a;
+
+    --head: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --text: "Courier Prime", "Courier New", Courier, monospace;
+
+    --ease: cubic-bezier(.2, .8, .2, 1);
+    --gutter: clamp(16px, 4vw, 48px);
+    --max: 1240px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 400 1rem/1.5 var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background-color .45s ease;
+  }
+  body[data-view="trabajos"] { --page: var(--paper); }
+  body[data-view="showreel"] { --page: var(--lilac); }
+  body[data-view="sobre-mi"] { --page: var(--mint); }
+  html.is-locked, html.is-locked body { overflow: hidden; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  .sr-only {
+    position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  /* Etiquetas: texto en mayúsculas */
+  .lbl { font: 400 .875rem/1.35 var(--text); text-transform: uppercase; letter-spacing: .01em; }
+
+  .skip {
+    position: absolute; left: 12px; top: -60px; z-index: 100;
+    background: var(--ink); color: #fff; padding: 8px 12px;
+    font: 700 .875rem/1 var(--text); text-transform: uppercase; text-decoration: none;
+    transition: top .2s var(--ease);
+  }
+  .skip:focus { top: 12px; }
+
+  /* Títulos de sección */
+  .title {
+    margin: 0;
+    font: 500 clamp(2.5rem, 6.5vw, 5rem)/.95 var(--head);
+    letter-spacing: -0.045em;
+  }
+  .title:focus { outline: none; }
+  .subtitle {
+    margin: 0;
+    font: 500 clamp(1.5rem, 2.6vw, 2rem)/1 var(--head);
+    letter-spacing: -0.03em;
+  }
+
+  /* Botón Copiar */
+  .copy {
+    padding: 7px 11px; border: 0; cursor: pointer;
+    background: var(--ink); color: #fff;
+    font: 700 .8125rem/1 var(--text); text-transform: uppercase; letter-spacing: .03em;
+    transition: transform .1s ease-out;
+    white-space: nowrap;
+  }
+  .copy:active { transform: scale(.96); }
+
+  /* ------------------------------------------------------------------
+     Cabecera
+     ------------------------------------------------------------------ */
+  .bar { position: sticky; top: 0; z-index: 50; background: var(--page); transition: background-color .45s ease; }
+  .bar-in {
+    max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter);
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0 28px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .brand {
+    padding: 16px 0;
+    font: 700 .9375rem/1 var(--text); text-transform: uppercase; letter-spacing: .02em;
+    text-decoration: none; white-space: nowrap;
+  }
+  .nav { display: flex; gap: clamp(16px, 3vw, 36px); justify-content: center; align-self: stretch; }
+  .nav a {
+    display: flex; align-items: center; padding: 0;
+    font: 400 .9375rem/1 var(--text); text-transform: uppercase; letter-spacing: .02em;
+    text-decoration: none; white-space: nowrap; color: var(--ink-3);
+    -webkit-tap-highlight-color: transparent;
+    transition: color .2s ease;
+  }
+  .nav a:hover { color: var(--ink); }
+  .nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+  .nav a[aria-current="page"]::before { content: "● "; white-space: pre; font-size: .6em; color: var(--rec); }
+
+  .bar-right { display: flex; align-items: center; gap: 18px; }
+  .tc {
+    display: inline-flex; align-items: center; gap: 8px;
+    font: 400 .875rem/1 var(--text); font-variant-numeric: tabular-nums;
+    color: var(--ink-2); white-space: nowrap;
+  }
+  .tc-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rec); }
+  .langs { display: flex; gap: 8px; }
+  .langs button {
+    padding: 4px 0; border: 0; background: none; cursor: pointer;
+    font: 400 .8125rem/1 var(--text); text-transform: uppercase; letter-spacing: .03em; color: var(--ink-3);
+  }
+  .langs button:hover { color: var(--ink); }
+  .langs button[aria-pressed="true"] { color: var(--ink); font-weight: 700; }
+
+  /* ------------------------------------------------------------------
+     Vistas
+     ------------------------------------------------------------------ */
+  main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .view { padding: clamp(32px, 5.5vw, 64px) 0 clamp(56px, 8vw, 104px); }
+  .view.is-entering { animation: viewIn .45s var(--ease) both; }
+  @keyframes viewIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .view-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 10px 24px; margin-bottom: clamp(28px, 5vw, 52px); }
+  .view-head .lbl { color: var(--ink-2); padding-bottom: .35em; }
+
+  /* ---------- Trabajos ---------- */
+  .grid {
+    display: grid; gap: clamp(36px, 5vw, 56px) clamp(20px, 2.4vw, 32px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .work {
+    display: block; width: 100%; padding: 0; border: 0; background: none;
+    text-align: left; cursor: pointer; border-top: 1px solid var(--ink);
+    align-self: start;                 /* los botones centran su contenido: lo alineamos arriba */
+    -webkit-tap-highlight-color: transparent;
+  }
+  .work-cat { display: block; padding: 10px 0 12px; font-weight: 700; }
+  .work-thumb {
+    position: relative; display: block; aspect-ratio: 16 / 10; overflow: hidden;
+    background: var(--fondo, #1a1a1a);
+  }
+  .work-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+  .work-thumb.is-contain img { object-fit: contain; padding: 6% 0; filter: drop-shadow(0 8px 18px rgba(0,0,0,.28)); }
+  .work:hover .work-thumb img { transform: scale(1.035); }
+  .work-tag {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    padding: 8px 12px; border: 1px solid #fff; color: #fff; background: rgba(0, 0, 0, .25);
+    font: 700 .875rem/1 var(--text); text-transform: uppercase; letter-spacing: .03em; white-space: nowrap;
+    opacity: 0; transition: opacity .25s ease;
+  }
+  .work:hover .work-tag, .work:focus-visible .work-tag { opacity: 1; }
+  .work-tc {
+    position: absolute; left: 0; bottom: 0; padding: 4px 7px;
+    background: var(--ink); color: #fff;
+    font: 400 .75rem/1 var(--text); font-variant-numeric: tabular-nums;
+  }
+  .work-title {
+    display: block; margin-top: 14px;
+    font: 500 clamp(1.5rem, 2.2vw, 1.875rem)/1.1 var(--head); letter-spacing: -0.03em;
+  }
+  .work-role { display: block; margin-top: 6px; font-size: .9375rem; line-height: 1.4; color: var(--ink-2); }
+
+  /* ---------- Showreel ---------- */
+  .monitor { background: var(--ink); padding: 10px; }
+  .monitor-bar { display: flex; justify-content: space-between; gap: 12px; padding: 2px 4px 10px; color: #bdbdbd; font-size: .8125rem; }
+  .monitor-bar.bot { padding: 10px 4px 2px; }
+  .frame { position: relative; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+  .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .nosignal {
+    position: absolute; inset: 0; display: grid; place-content: center; text-align: center;
+    background:
+      linear-gradient(90deg, #c0c0c0 0 14.28%, #c0c000 0 28.57%, #00c0c0 0 42.85%, #00c000 0 57.14%,
+        #c000c0 0 71.42%, #c00000 0 85.71%, #0000c0 0 100%) top / 100% 67% no-repeat,
+      linear-gradient(90deg, #0000c0 0 14.28%, #131313 0 28.57%, #c000c0 0 42.85%, #131313 0 57.14%,
+        #00c0c0 0 71.42%, #131313 0 85.71%, #c0c0c0 0 100%) 0 67% / 100% 8% no-repeat,
+      linear-gradient(90deg, #00214c 0 17.8%, #fff 0 35.6%, #32006a 0 53.4%, #131313 0 100%) bottom / 100% 25% no-repeat;
+  }
+  .nosignal strong {
+    display: inline-block; padding: .15em .4em; background: var(--ink); color: #fff;
+    font: 500 clamp(1rem, 3vw, 2rem)/1.1 var(--head); letter-spacing: -0.02em;
+  }
+  .nosignal .lbl { display: inline-block; margin-top: 10px; padding: 4px 8px; background: #fff; color: var(--ink); }
+  .scrub { flex: 1; position: relative; height: 1px; background: #5a5a5a; align-self: center; margin: 0 8px; }
+  .scrub::before { content: ""; position: absolute; left: 0; top: -5px; width: 2px; height: 11px; background: var(--avid-pos); }
+
+  /* ---------- Sobre mí ---------- */
+  #v-sobre-mi { padding-top: clamp(24px, 3.5vw, 40px); }
+  .about {
+    display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px clamp(24px, 4vw, 56px);
+    align-items: start;
+  }
+  .name { margin: 0; font: 500 clamp(1.75rem, 3vw, 2.375rem)/1.02 var(--head); letter-spacing: -0.04em; }
+  .name:focus { outline: none; }
+  .role { margin: 10px 0 0; color: var(--ink-2); }
+  .bio { margin: 0; font-size: .9375rem; line-height: 1.55; max-width: 62ch; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 18px; }
+  .mail { font-size: .9375rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; word-break: break-all; }
+  .mail:hover { text-decoration-thickness: 2px; }
+
+  .block { margin-top: clamp(32px, 4.5vw, 52px); }
+  .block-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 6px 16px; margin-bottom: 14px; }
+  .block-head .lbl { color: var(--ink-2); }
+
+  /* Timeline estilo Avid */
+  .avid { background: var(--avid-bg); color: var(--avid-text); border: 1px solid #111; box-shadow: 0 18px 40px rgba(0, 0, 0, .18); font-family: var(--head); }
+  .avid-title {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 5px 10px; background: #474747; border-bottom: 1px solid #111;
+    font: 400 .75rem/1.2 var(--head); color: #d6d6d6;
+  }
+  .avid-title b { font-weight: 600; }
+  .avid-tools { display: flex; gap: 4px; }
+  .avid-tools i { width: 18px; height: 14px; border-radius: 2px; background: #5a5a5a; border: 1px solid #2a2a2a; }
+  .avid-tools i:nth-child(1) { background: #6b6b6b; }
+  .avid-tools i:nth-child(3) { background: #7a5f5f; }
+
+  .tl { --hdr: 74px; position: relative; padding: 0 0 4px; }
+  .tl-row { display: grid; grid-template-columns: var(--hdr) 1fr; border-bottom: 1px solid var(--avid-line); }
+  .tl-hdr { display: flex; align-items: center; gap: 5px; padding: 0 6px; background: var(--avid-panel); border-right: 1px solid var(--avid-line); }
+  .trk {
+    display: inline-grid; place-items: center; min-width: 30px; height: 20px; padding: 0 4px;
+    border-radius: 3px; border: 1px solid #222; font: 600 .6875rem/1 var(--head); color: #1d1d1d;
+  }
+  .trk.v { background: var(--avid-video); }
+  .trk.a { background: var(--avid-audio); }
+  .trk.tc1 { background: #5b5b5b; color: #e6e6e6; }
+  .trk-mon { width: 10px; height: 10px; border-radius: 2px; background: #555; border: 1px solid #222; }
+  .trk-mon.on { background: #b7b7b7; }
+  .tl-lane { position: relative; background: var(--avid-lane); }
+  .tl-ruler .tl-lane {
+    height: 26px; display: grid; grid-template-columns: repeat(var(--cols), 1fr);
+    background-color: #262626;
+    background-image: repeating-linear-gradient(90deg, #5b5b5b 0 1px, transparent 1px calc(100% / (var(--cols) * 12)));
+    background-size: 100% 6px; background-repeat: no-repeat; background-position: bottom left;
+  }
+  .tl-year { padding: 4px 0 0 5px; border-left: 1px solid #6a6a6a; font: 400 .6875rem/1 var(--head); color: var(--avid-dim); font-variant-numeric: tabular-nums; }
+  .tl-video .tl-lane { height: 44px; }
+  .tl-audio .tl-lane { height: 28px; }
+  .seg {
+    position: absolute; top: 3px; bottom: 3px; overflow: hidden;
+    padding: 3px 7px; border: 1px solid var(--e); background: var(--c); color: #161616; min-width: 0;
+  }
+  .seg.v { --c: var(--avid-video); --e: var(--avid-video-edge); }
+  .seg.a { --c: var(--avid-audio); --e: var(--avid-audio-edge); padding: 0; }
+  .seg strong, .seg span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .seg strong { font: 600 .75rem/1.25 var(--head); }
+  .seg span { font: 400 .6875rem/1.3 var(--head); color: #2c2c3c; }
+  .seg.a svg { position: absolute; inset: 0; width: 100%; height: 100%; color: #2d6e5a; }
+  .seg.live { border-right-style: dashed; }
+  .tl-pos { position: absolute; top: 0; bottom: 4px; left: var(--hdr); right: 0; pointer-events: none; }
+  .pos { position: absolute; top: 0; bottom: 0; left: 0; width: 0; z-index: 3; transition: left 1.4s var(--ease); }
+  .pos.no-anim { transition: none; }
+  .pos::before { content: ""; position: absolute; top: 0; bottom: 0; left: -1px; width: 2px; background: var(--avid-pos); }
+  .pos::after {
+    content: ""; position: absolute; top: 0; left: -6px; width: 0; height: 0;
+    border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 8px solid var(--avid-pos);
+  }
+  .avid-foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 5px 10px; background: #3f3f3f; border-top: 1px solid #111;
+    font: 400 .6875rem/1.2 var(--head); color: #bdbdbd;
+  }
+  .zoom { display: inline-flex; align-items: center; gap: 6px; }
+  .zoom i { display: block; width: 90px; height: 3px; background: #262626; position: relative; }
+  .zoom i::after { content: ""; position: absolute; left: 62%; top: -4px; width: 8px; height: 11px; background: #a9a9a9; border-radius: 1px; }
+  .avid-list { list-style: none; margin: 0; padding: 8px; display: none; }
+  .avid-list li { display: grid; grid-template-columns: 58px 1fr; gap: 8px; align-items: stretch; margin-bottom: 6px; }
+  .avid-list .yr { display: grid; place-items: center; padding: 4px; background: var(--avid-panel); font: 600 .6875rem/1.2 var(--head); color: var(--avid-text); text-align: center; }
+  .avid-list .seg { position: static; padding: 8px 10px; }
+  .avid-list .seg strong { font-size: .875rem; white-space: normal; }
+  .avid-list .seg span { font-size: .8125rem; white-space: normal; }
+
+  /* Programas e idiomas */
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; border-top: 1px solid var(--ink); }
+  .chips li { display: flex; align-items: center; gap: 12px; padding: 14px 32px 14px 0; font-size: .9375rem; }
+  .app-icon { width: 34px; height: 34px; flex: none; border-radius: 8px; overflow: hidden; }
+  .app-icon svg { display: block; width: 100%; height: 100%; }
+  .chips.langs-list li { font: 500 1.25rem/1.1 var(--head); letter-spacing: -0.02em; }
+
+  /* ---------- Visor modal ---------- */
+  dialog.lb {
+    position: fixed; inset: 0; width: 100%; height: 100%; max-width: 100%; max-height: 100%;
+    margin: 0; padding: var(--gutter); border: 0; background: rgba(20, 20, 20, .6);
+    opacity: 0; transition: opacity .22s ease;
+  }
+  dialog.lb[open] { display: grid; place-items: center; }
+  dialog.lb::backdrop { background: transparent; }
+  dialog.lb.is-open { opacity: 1; }
+  .sheet {
+    width: min(1160px, 100%); max-height: 100%; overflow: auto;
+    background: var(--paper); border: 1px solid var(--ink);
+    transform: translateY(16px); transition: transform .4s var(--ease);
+  }
+  dialog.lb.is-open .sheet { transform: none; }
+  .sheet-head {
+    position: sticky; top: 0; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 14px; background: var(--paper); border-bottom: 1px solid var(--ink);
+  }
+  .sheet-head .lbl { font-weight: 700; }
+  .sheet-body { padding: clamp(16px, 3vw, 28px); }
+  .sheet-title { margin: 0; font: 500 clamp(1.875rem, 4vw, 3rem)/1.02 var(--head); letter-spacing: -0.04em; }
+  .sheet-role { margin: 8px 0 22px; color: var(--ink-2); }
+  .sheet .frame { max-width: calc((100vh - 260px) * 16 / 9); }
+  .gal { display: grid; gap: 12px; margin-top: 12px; }
+  .gal.two { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); align-items: start; }
+  .gal.one { grid-template-columns: minmax(0, 460px); justify-content: center; }
+  .gal-stills { display: grid; gap: 12px; }
+  .gal img { width: 100%; height: auto; background: #000; }
+  .sheet-note { margin: 18px 0 0; color: var(--ink-2); }
+
+  /* ---------- Pie ---------- */
+  .foot { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .foot-in {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px;
+    padding: 16px 0 28px; border-top: 1px solid var(--ink); color: var(--ink-2);
+  }
+  .foot-mail { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .foot-mail a { text-underline-offset: 3px; }
+
+  /* ------------------------------------------------------------------
+     Responsive
+     ------------------------------------------------------------------ */
+  @media (max-width: 1000px) {
+    .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 860px) {
+    .about { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .tl, .avid-foot .zoom { display: none; }
+    .avid-list { display: block; }
+    .gal.two { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: minmax(0, 1fr); }
+    .bar-in { grid-template-columns: 1fr auto; }
+    .brand { font-size: .8125rem; padding: 14px 0; }
+    .nav { grid-column: 1; grid-row: 2; justify-content: flex-start; gap: 16px; padding: 12px 0; }
+    .nav a { font-size: .8125rem; }
+    .bar-right { display: contents; }
+    .tc { grid-column: 2; grid-row: 1; font-size: .8125rem; }
+    .langs { grid-column: 2; grid-row: 2; justify-content: flex-end; }
+    .chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .chips li { padding-right: 8px; font-size: .875rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .view.is-entering { animation: fadeIn .2s ease both; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .pos, .sheet, .work-thumb img { transition: none !important; }
+    .sheet { transform: none !important; }
+    .work:hover .work-thumb img { transform: none; }
+    body, .bar { transition: none; }
+  }
+</style>
+</head>
+<body data-view="trabajos">
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#trabajos">Cristina Mora Pérez</a>
+    <nav class="nav" data-i18n-aria="nav">
+      <a href="#trabajos" data-view="trabajos" data-i18n="nav.trabajos">Trabajos</a>
+      <a href="#showreel" data-view="showreel" data-i18n="nav.showreel">Showreel</a>
+      <a href="#sobre-mi" data-view="sobre-mi" data-i18n="nav.sobre">Sobre mí</a>
+    </nav>
+    <div class="bar-right">
+      <div class="tc" aria-hidden="true"><span class="tc-dot"></span><span id="live-tc">00:00:00:00</span></div>
+      <div class="langs" role="group" data-i18n-aria="lang">
+        <button type="button" data-lang="ca" lang="ca" aria-label="Català">CA</button>
+        <button type="button" data-lang="es" lang="es" aria-label="Castellano">ES</button>
+        <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ TRABAJOS ============================ -->
+  <section class="view" id="v-trabajos" aria-labelledby="h-trabajos">
+    <div class="view-head">
+      <h1 class="title" id="h-trabajos" tabindex="-1" data-i18n="nav.trabajos">Trabajos</h1>
+      <p class="lbl" id="bin-count"></p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ============================ SHOWREEL ============================ -->
+  <section class="view" id="v-showreel" aria-labelledby="h-showreel" hidden>
+    <div class="view-head">
+      <h1 class="title" id="h-showreel" tabindex="-1">Showreel</h1>
+      <p class="lbl" data-i18n="reel.sub">Una selección de mi trabajo de montaje</p>
+    </div>
+    <div class="monitor">
+      <div class="monitor-bar lbl" aria-hidden="true"><span>Record monitor</span><span>1920×1080 · 25P</span></div>
+      <div class="frame" id="reel-frame"></div>
+      <div class="monitor-bar bot lbl" aria-hidden="true"><span>00:00:00:00</span><span class="scrub"></span><span>--:--:--:--</span></div>
+    </div>
+  </section>
+
+  <!-- ============================ SOBRE MÍ ============================ -->
+  <section class="view" id="v-sobre-mi" aria-labelledby="h-sobre-mi" hidden>
+    <div class="about">
+      <div>
+        <h1 class="name" id="h-sobre-mi" tabindex="-1">Cristina Mora Pérez</h1>
+        <p class="role lbl" data-i18n="about.role">Montadora y coordinadora de postproducción · Barcelona</p>
+        <div class="contact">
+          <a class="mail" href="mailto:crismoraperez99@gmail.com">crismoraperez99@gmail.com</a>
+          <button class="copy" type="button" data-i18n="copy">Copiar</button>
+        </div>
+      </div>
+      <p class="bio" data-i18n="about.bio">Hola! Mi trabajo explora las posibilidades narrativas y expresivas del montaje, entendiendo la imagen y el ritmo como herramientas para construir historias, atmósferas y nuevas formas de percepción. Me interesa tanto la ficción como la experimentación audiovisual. Tengo formación en Bellas Artes y un Máster en edición y montaje de vídeo. Desde 2022 trabajo como montadora y coordinadora de postproducción en Masia Reels y editando vídeo por cuenta propia en proyectos de ficción, documental y videoclip.</p>
+    </div>
+
+    <div class="block" aria-labelledby="h-exp">
+      <div class="block-head">
+        <h2 class="subtitle" id="h-exp" data-i18n="about.exp">Experiencia</h2>
+        <span class="lbl" id="exp-range"></span>
+      </div>
+      <div class="avid">
+        <div class="avid-title" aria-hidden="true">
+          <span>Timeline — <b>EXPERIENCIA_CMP</b></span>
+          <span class="avid-tools"><i></i><i></i><i></i></span>
+        </div>
+        <div class="tl" id="tl"></div>
+        <ol class="avid-list" id="avid-list"></ol>
+        <div class="avid-foot" aria-hidden="true">
+          <span>25 fps · 1920×1080</span>
+          <span class="zoom"><span data-i18n="about.scale">Escala</span> <i></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="block" aria-labelledby="h-apps">
+      <div class="block-head"><h2 class="subtitle" id="h-apps" data-i18n="about.apps">Programas</h2></div>
+      <ul class="chips">
+        <li>
+          <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="g-avid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2540"/><stop offset="1" stop-color="#141220"/></linearGradient></defs><rect width="48" height="48" fill="url(#g-avid)"/><path d="M12 32 L17.5 16 L23 32" fill="none" stroke="#b8a6ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 16 L31 32 L36 16" fill="none" stroke="#e7e1ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Avid Media Composer
+        </li>
+        <li>
+          <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><defs><linearGradient id="g-dvr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a3e"/><stop offset="1" stop-color="#1c1c1e"/></linearGradient></defs><rect width="48" height="48" fill="url(#g-dvr)"/><g style="mix-blend-mode:screen" opacity=".95"><ellipse cx="24" cy="17.5" rx="6" ry="9" fill="#f2b53a"/><ellipse cx="24" cy="17.5" rx="6" ry="9" fill="#3fb5e8" transform="rotate(120 24 25)"/><ellipse cx="24" cy="17.5" rx="6" ry="9" fill="#f05a4f" transform="rotate(240 24 25)"/></g></svg></span>
+          DaVinci Resolve
+        </li>
+        <li>
+          <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#2a0634"/><rect x="4" y="4" width="40" height="40" rx="7" fill="none" stroke="#ea77ff" stroke-width="1.6"/><text x="24" y="30.5" text-anchor="middle" font-family="'Space Grotesk', Arial, sans-serif" font-weight="600" font-size="17" fill="#ea77ff">Pr</text></svg></span>
+          Premiere Pro
+        </li>
+        <li>
+          <span class="app-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect width="48" height="48" fill="#00005b"/><rect x="4" y="4" width="40" height="40" rx="7" fill="none" stroke="#9999ff" stroke-width="1.6"/><text x="24" y="30.5" text-anchor="middle" font-family="'Space Grotesk', Arial, sans-serif" font-weight="600" font-size="17" fill="#9999ff">Ae</text></svg></span>
+          After Effects
+        </li>
+      </ul>
+    </div>
+
+    <div class="block" aria-labelledby="h-langs">
+      <div class="block-head"><h2 class="subtitle" id="h-langs" data-i18n="about.langs">Idiomas</h2></div>
+      <ul class="chips langs-list" id="langs-list"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in lbl">
+    <span>© 2026 Cristina Mora Pérez</span>
+    <span class="foot-mail">
+      <a href="mailto:crismoraperez99@gmail.com">crismoraperez99@gmail.com</a>
+      <button class="copy" type="button" data-i18n="copy">Copiar</button>
+    </span>
+  </div>
+</footer>
+<span class="sr-only" id="copy-status" aria-live="polite"></span>
+
+<dialog class="lb" id="lb" aria-labelledby="lb-title">
+  <div class="sheet">
+    <div class="sheet-head">
+      <span class="lbl" id="lb-cat"></span>
+      <button class="copy" type="button" id="lb-close" data-i18n="close">Cerrar ✕</button>
+    </div>
+    <div class="sheet-body">
+      <h2 class="sheet-title" id="lb-title"></h2>
+      <p class="sheet-role" id="lb-role"></p>
+      <div id="lb-media"></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* =====================================================================
+   EDITA AQUÍ
+   - SHOWREEL: enlace de Vimeo o YouTube ("" = "Showreel próximamente").
+   - TRABAJOS (en el orden en que se muestran):
+       titulo, categoria, rol, anio ("" para no mostrarlo),
+       video:    enlace de Vimeo o YouTube ("" si no hay),
+       duracion: duración del vídeo "HH:MM:SS:FF" (sin vídeo = 00:00:00:00),
+       thumb:    imagen de la tarjeta,
+       encaje:   "contain" para carteles verticales (se ven enteros sobre "fondo"),
+       poster:   cartel (opcional), fotos: lista de fotogramas (opcional).
+   - EXPERIENCIA: desde, hasta (null = actualidad; quítalo si es un solo año),
+       rol, proyecto, tipo. Se ordena sola cronológicamente.
+   - IDIOMAS: claves de los idiomas que hablas (ver TEXTOS más abajo).
+   - TRADUCCIONES: el texto en castellano de categorías y roles, con su
+       versión en catalán (ca) e inglés (en). Si falta, se muestra en castellano.
+   ===================================================================== */
+const SHOWREEL = "";
+
+const TRABAJOS = [
+  { titulo: "Delta", categoria: "Cortometraje", rol: "Montaje", anio: 2026,
+    video: "", duracion: "", thumb: "assets/fotos/DELTA.jpeg", encaje: "contain", fondo: "#e8452c",
+    poster: "assets/fotos/DELTA.jpeg", fotos: [] },
+  { titulo: "Un hombre solo", categoria: "Cortometraje", rol: "Supervisión de efectos especiales (VFX)", anio: 2025,
+    video: "", duracion: "", thumb: "assets/fotos/UHS_2.jpeg",
+    poster: "assets/fotos/UHS.jpeg", fotos: ["assets/fotos/UHS_2.jpeg", "assets/fotos/UHS_3.jpeg", "assets/fotos/UHS_4.jpeg"] },
+  { titulo: "La luz de los domingos", categoria: "Cortometraje", rol: "Montaje del tráiler · Asistente de montaje", anio: 2024,
+    video: "https://youtu.be/nKcOu6XMCEI", duracion: "00:00:25:00", thumb: "assets/fotos/LLDLD.jpeg" },
+  { titulo: "Al meu costat", categoria: "Escena · Drama", rol: "Montaje", anio: "",
+    video: "https://youtu.be/X09uzxShETg", duracion: "00:04:47:00", thumb: "assets/thumbs/al-meu-costat.jpg" },
+  { titulo: "Celos", categoria: "Escena · Comedia", rol: "Montaje", anio: "",
+    video: "https://youtu.be/-VwTfA_WZJE", duracion: "00:02:04:00", thumb: "assets/thumbs/celos.jpg" }
+];
+
+const EXPERIENCIA = [
+  { desde: 2022, hasta: null, rol: "Montadora y coordinadora de postproducción", proyecto: "Masia Reels",            tipo: "Productora" },
+  { desde: 2024,              rol: "Asistente de montaje",                       proyecto: "La luz de los domingos", tipo: "Cortometraje" },
+  { desde: 2025,              rol: "Supervisora de efectos especiales (VFX)",    proyecto: "Un hombre solo",         tipo: "Cortometraje" },
+  { desde: 2026,              rol: "Montadora",                                  proyecto: "Delta",                  tipo: "Cortometraje" },
+  { desde: 2026,              rol: "Montadora",                                  proyecto: "Liria",                  tipo: "Fashion film" }
+];
+
+const IDIOMAS = ["lang.ca", "lang.es", "lang.it", "lang.en"];
+
+const TRADUCCIONES = {
+  "Cortometraje":       { ca: "Curtmetratge", en: "Short film" },
+  "Escena · Drama":     { ca: "Escena · Drama", en: "Scene · Drama" },
+  "Escena · Comedia":   { ca: "Escena · Comèdia", en: "Scene · Comedy" },
+  "Productora":         { ca: "Productora", en: "Production company" },
+  "Fashion film":       { ca: "Fashion film", en: "Fashion film" },
+  "Montaje":            { ca: "Muntatge", en: "Editing" },
+  "Montadora":          { ca: "Muntadora", en: "Editor" },
+  "Asistente de montaje": { ca: "Ajudant de muntatge", en: "Assistant editor" },
+  "Montaje del tráiler · Asistente de montaje": { ca: "Muntatge del tràiler · Ajudant de muntatge", en: "Trailer editing · Assistant editor" },
+  "Supervisión de efectos especiales (VFX)": { ca: "Supervisió d'efectes especials (VFX)", en: "VFX supervision" },
+  "Supervisora de efectos especiales (VFX)": { ca: "Supervisora d'efectes especials (VFX)", en: "VFX supervisor" },
+  "Montadora y coordinadora de postproducción": { ca: "Muntadora i coordinadora de postproducció", en: "Editor and post-production coordinator" }
+};
+/* ===================== FIN DE LA ZONA EDITABLE ===================== */
+
+const TEXTOS = {
+  es: {
+    "skip": "Saltar al contenido",
+    "nav": "Secciones", "lang": "Idioma",
+    "nav.trabajos": "Trabajos", "nav.showreel": "Showreel", "nav.sobre": "Sobre mí",
+    "title.trabajos": "Trabajos", "title.showreel": "Showreel", "title.sobre-mi": "Sobre mí",
+    "desc": "Cristina Mora Pérez, montadora y coordinadora de postproducción en Barcelona. Trabajos, showreel y experiencia en ficción, documental y videoclip.",
+    "bin.one": "Bin · 1 proyecto", "bin.many": "Bin · {n} proyectos",
+    "reel.sub": "Una selección de mi trabajo de montaje",
+    "reel.soon": "Showreel próximamente", "nosignal": "Sin señal",
+    "work.watch": "▶ Ver vídeo", "work.photos": "Ver fotos", "work.soon": "Próximamente",
+    "video.soon": "Vídeo próximamente", "poster": "Cartel de {t}", "still": "Fotograma {n} de {t}",
+    "close": "Cerrar ✕", "copy": "Copiar", "copied": "Copiado ✓", "copied.sr": "Email copiado al portapapeles",
+    "about.role": "Montadora y coordinadora de postproducción · Barcelona",
+    "about.bio": "Hola! Mi trabajo explora las posibilidades narrativas y expresivas del montaje, entendiendo la imagen y el ritmo como herramientas para construir historias, atmósferas y nuevas formas de percepción. Me interesa tanto la ficción como la experimentación audiovisual. Tengo formación en Bellas Artes y un Máster en edición y montaje de vídeo. Desde 2022 trabajo como montadora y coordinadora de postproducción en Masia Reels y editando vídeo por cuenta propia en proyectos de ficción, documental y videoclip.",
+    "about.exp": "Experiencia", "about.apps": "Programas", "about.langs": "Idiomas", "about.scale": "Escala",
+    "exp.range": "Secuencia · {a} — hoy", "exp.today": "hoy", "exp.list": "Experiencia en orden cronológico",
+    "lang.ca": "Catalán", "lang.es": "Castellano", "lang.it": "Italiano", "lang.en": "Inglés"
+  },
+  ca: {
+    "skip": "Salta al contingut",
+    "nav": "Seccions", "lang": "Idioma",
+    "nav.trabajos": "Treballs", "nav.showreel": "Showreel", "nav.sobre": "Sobre mi",
+    "title.trabajos": "Treballs", "title.showreel": "Showreel", "title.sobre-mi": "Sobre mi",
+    "desc": "Cristina Mora Pérez, muntadora i coordinadora de postproducció a Barcelona. Treballs, showreel i experiència en ficció, documental i videoclip.",
+    "bin.one": "Bin · 1 projecte", "bin.many": "Bin · {n} projectes",
+    "reel.sub": "Una selecció del meu treball de muntatge",
+    "reel.soon": "Showreel aviat", "nosignal": "Sense senyal",
+    "work.watch": "▶ Veure vídeo", "work.photos": "Veure fotos", "work.soon": "Aviat",
+    "video.soon": "Vídeo aviat", "poster": "Cartell de {t}", "still": "Fotograma {n} de {t}",
+    "close": "Tancar ✕", "copy": "Copiar", "copied": "Copiat ✓", "copied.sr": "Correu copiat al porta-retalls",
+    "about.role": "Muntadora i coordinadora de postproducció · Barcelona",
+    "about.bio": "Hola! El meu treball explora les possibilitats narratives i expressives del muntatge, entenent la imatge i el ritme com a eines per construir històries, atmosferes i noves formes de percepció. M'interessa tant la ficció com l'experimentació audiovisual. Tinc formació en Belles Arts i un Màster en edició i muntatge de vídeo. Des del 2022 treballo com a muntadora i coordinadora de postproducció a Masia Reels i editant vídeo pel meu compte en projectes de ficció, documental i videoclip.",
+    "about.exp": "Experiència", "about.apps": "Programes", "about.langs": "Idiomes", "about.scale": "Escala",
+    "exp.range": "Seqüència · {a} — avui", "exp.today": "avui", "exp.list": "Experiència en ordre cronològic",
+    "lang.ca": "Català", "lang.es": "Castellà", "lang.it": "Italià", "lang.en": "Anglès"
+  },
+  en: {
+    "skip": "Skip to content",
+    "nav": "Sections", "lang": "Language",
+    "nav.trabajos": "Work", "nav.showreel": "Showreel", "nav.sobre": "About",
+    "title.trabajos": "Work", "title.showreel": "Showreel", "title.sobre-mi": "About",
+    "desc": "Cristina Mora Pérez, film editor and post-production coordinator based in Barcelona. Work, showreel and experience in fiction, documentary and music videos.",
+    "bin.one": "Bin · 1 project", "bin.many": "Bin · {n} projects",
+    "reel.sub": "A selection of my editing work",
+    "reel.soon": "Showreel coming soon", "nosignal": "No signal",
+    "work.watch": "▶ Watch", "work.photos": "View photos", "work.soon": "Coming soon",
+    "video.soon": "Video coming soon", "poster": "Poster for {t}", "still": "Still {n} from {t}",
+    "close": "Close ✕", "copy": "Copy", "copied": "Copied ✓", "copied.sr": "Email copied to clipboard",
+    "about.role": "Film editor and post-production coordinator · Barcelona",
+    "about.bio": "Hi! My work explores the narrative and expressive possibilities of editing, approaching image and rhythm as tools to build stories, atmospheres and new ways of seeing. I'm interested in both fiction and experimental audiovisual work. I trained in Fine Arts and hold a Master's in video editing. Since 2022 I've worked as an editor and post-production coordinator at Masia Reels, and as a freelance editor on fiction, documentary and music video projects.",
+    "about.exp": "Experience", "about.apps": "Software", "about.langs": "Languages", "about.scale": "Scale",
+    "exp.range": "Sequence · {a} — today", "exp.today": "today", "exp.list": "Experience in chronological order",
+    "lang.ca": "Catalan", "lang.es": "Spanish", "lang.it": "Italian", "lang.en": "English"
+  }
+};
+
+(function () {
+  "use strict";
+
+  const FPS = 25;
+  const LANGS = ["ca", "es", "en"];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const $ = function (id) { return document.getElementById(id); };
+
+  /* ------------------------------------------------------------------
+     Idioma
+     ------------------------------------------------------------------ */
+  function storedLang() {
+    try { const v = localStorage.getItem("lang"); return LANGS.indexOf(v) !== -1 ? v : null; } catch (e) { return null; }
+  }
+  function browserLang() {
+    const l = ((navigator.languages && navigator.languages[0]) || navigator.language || "es").slice(0, 2).toLowerCase();
+    return LANGS.indexOf(l) !== -1 ? l : "es";
+  }
+  let lang = storedLang() || browserLang();
+  function t(key, vars) {
+    let s = (TEXTOS[lang] && TEXTOS[lang][key]) || TEXTOS.es[key] || key;
+    if (vars) Object.keys(vars).forEach(function (k) { s = s.replace("{" + k + "}", vars[k]); });
+    return s;
+  }
+  function tr(text) {
+    if (lang === "es" || !text) return text;
+    const e = TRADUCCIONES[text];
+    return (e && e[lang]) || text;
+  }
+
+  function el(tag, attrs, text) {
+    const n = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function pad(n) { return String(n).padStart(2, "0"); }
+  function tc(frames) {
+    const f = frames % FPS, s = Math.floor(frames / FPS);
+    return pad(Math.floor(s / 3600)) + ":" + pad(Math.floor(s / 60) % 60) + ":" + pad(s % 60) + ":" + pad(f);
+  }
+  function catDe(w) { return [tr(w.categoria), w.anio].filter(Boolean).join(" · "); }
+  function durDe(w) { return (w.video && w.duracion) ? w.duracion : "00:00:00:00"; }
+
+  /* Enlaces de YouTube / Vimeo -> URL de inserción ("" si no se reconoce) */
+  function toEmbed(url, autoplay) {
+    if (!url || typeof url !== "string") return "";
+    let u;
+    try { u = new URL(url.trim()); } catch (e) { return ""; }
+    const host = u.hostname.toLowerCase().replace(/^(www\.|m\.)/, "");
+    const ytId = /^[A-Za-z0-9_-]{6,}$/;
+    const ap = autoplay ? "autoplay=1&" : "";
+    const hl = "hl=" + lang + "&";
+    let id = "";
+    if (host === "youtube.com" || host === "youtube-nocookie.com") {
+      if (u.pathname === "/watch") id = u.searchParams.get("v") || "";
+      else { const m = u.pathname.match(/^\/(?:shorts|embed|live)\/([A-Za-z0-9_-]{6,})/); id = m ? m[1] : ""; }
+      return ytId.test(id) ? "https://www.youtube.com/embed/" + id + "?" + ap + hl + "rel=0&playsinline=1" : "";
+    }
+    if (host === "youtu.be") {
+      id = u.pathname.split("/")[1] || "";
+      return ytId.test(id) ? "https://www.youtube.com/embed/" + id + "?" + ap + hl + "rel=0&playsinline=1" : "";
+    }
+    if (host === "vimeo.com" || host === "player.vimeo.com") {
+      const m = u.pathname.match(/^\/(?:video\/)?(\d+)(?:\/([A-Za-z0-9]+))?\/?$/);
+      if (!m) return "";
+      const hash = m[2] || u.searchParams.get("h");
+      return "https://player.vimeo.com/video/" + m[1] + "?" + ap + (hash ? "h=" + encodeURIComponent(hash) + "&" : "") + "dnt=1";
+    }
+    return "";
+  }
+  function iframeFor(src, title) {
+    return el("iframe", {
+      src: src, title: title, loading: "lazy",
+      allow: "autoplay; fullscreen; picture-in-picture; encrypted-media",
+      allowfullscreen: "", referrerpolicy: "strict-origin-when-cross-origin"
+    });
+  }
+  function noSignal(text) {
+    const box = el("div", { class: "nosignal" });
+    const inner = el("div");
+    inner.appendChild(el("strong", null, text));
+    inner.appendChild(el("br"));
+    inner.appendChild(el("span", { class: "lbl" }, t("nosignal")));
+    box.appendChild(inner);
+    return box;
+  }
+
+  /* ------------------------------------------------------------------
+     Trabajos
+     ------------------------------------------------------------------ */
+  const grid = $("grid");
+  function renderWorks() {
+    grid.textContent = "";
+    $("bin-count").textContent = TRABAJOS.length === 1 ? t("bin.one") : t("bin.many", { n: TRABAJOS.length });
+    TRABAJOS.forEach(function (w, i) {
+      const hasMedia = !!(w.video || w.poster || (w.fotos && w.fotos.length));
+      const b = el("button", { class: "work", type: "button", "data-i": String(i), "aria-label": w.titulo + ". " + catDe(w) + ". " + tr(w.rol) });
+      b.appendChild(el("span", { class: "work-cat lbl" }, catDe(w)));
+      const th = el("span", { class: "work-thumb" + (w.encaje === "contain" ? " is-contain" : "") });
+      if (w.fondo) th.style.setProperty("--fondo", w.fondo);
+      if (w.thumb) th.appendChild(el("img", { src: w.thumb, alt: "", loading: i < 6 ? "eager" : "lazy", decoding: "async" }));
+      th.appendChild(el("span", { class: "work-tag", "aria-hidden": "true" }, w.video ? t("work.watch") : (hasMedia ? t("work.photos") : t("work.soon"))));
+      th.appendChild(el("span", { class: "work-tc", "aria-hidden": "true" }, durDe(w)));
+      b.appendChild(th);
+      b.appendChild(el("span", { class: "work-title" }, w.titulo));
+      b.appendChild(el("span", { class: "work-role" }, tr(w.rol)));
+      grid.appendChild(b);
+    });
+  }
+
+  /* Visor modal */
+  const lb = $("lb"), lbMedia = $("lb-media");
+  let opener = null, closeTimer = 0;
+  const canDialog = typeof lb.showModal === "function";
+
+  function openWork(i, from) {
+    const w = TRABAJOS[i];
+    opener = from;
+    clearTimeout(closeTimer);
+    $("lb-cat").textContent = catDe(w) + " · " + durDe(w);
+    $("lb-title").textContent = w.titulo;
+    $("lb-role").textContent = tr(w.rol);
+    lbMedia.textContent = "";
+
+    const src = toEmbed(w.video, true);
+    if (src) {
+      const fr = el("div", { class: "frame" });
+      fr.appendChild(iframeFor(src, w.titulo));
+      lbMedia.appendChild(fr);
+    }
+    const fotos = (w.fotos || []).slice();
+    if (w.poster || fotos.length) {
+      const gal = el("div", { class: "gal " + (w.poster && fotos.length ? "two" : (w.poster ? "one" : "")) });
+      if (w.poster) gal.appendChild(el("img", { src: w.poster, alt: t("poster", { t: w.titulo }), decoding: "async" }));
+      if (fotos.length) {
+        const col = el("div", { class: "gal-stills" });
+        fotos.forEach(function (f, k) { col.appendChild(el("img", { src: f, alt: t("still", { n: k + 1, t: w.titulo }), loading: "lazy", decoding: "async" })); });
+        gal.appendChild(col);
+      }
+      lbMedia.appendChild(gal);
+      if (!src) lbMedia.appendChild(el("p", { class: "sheet-note lbl" }, t("video.soon")));
+    }
+    if (!src && !w.poster && !fotos.length) {
+      const fr = el("div", { class: "frame" });
+      fr.appendChild(noSignal(t("work.soon")));
+      lbMedia.appendChild(fr);
+    }
+
+    document.documentElement.classList.add("is-locked");
+    if (canDialog) lb.showModal(); else lb.setAttribute("open", "");
+    lb.querySelector(".sheet").scrollTop = 0;
+    requestAnimationFrame(function () { requestAnimationFrame(function () { lb.classList.add("is-open"); }); });
+    $("lb-close").focus();
+  }
+  function closeWork() {
+    if (!lb.hasAttribute("open")) return;
+    lb.classList.remove("is-open");
+    clearTimeout(closeTimer);
+    closeTimer = setTimeout(finishClose, reduceMotion.matches ? 0 : 220);
+  }
+  function finishClose() {
+    if (canDialog && lb.open) lb.close(); else lb.removeAttribute("open");
+    lbMedia.textContent = "";
+    document.documentElement.classList.remove("is-locked");
+    if (opener) opener.focus();
+    opener = null;
+  }
+  grid.addEventListener("click", function (e) {
+    const b = e.target.closest(".work");
+    if (b) openWork(Number(b.dataset.i), b);
+  });
+  $("lb-close").addEventListener("click", closeWork);
+  lb.addEventListener("click", function (e) { if (e.target === lb) closeWork(); });
+  lb.addEventListener("cancel", function (e) { e.preventDefault(); closeWork(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !canDialog) closeWork(); });
+
+  /* ------------------------------------------------------------------
+     Showreel
+     ------------------------------------------------------------------ */
+  const reelFrame = $("reel-frame");
+  function mountReel() {
+    reelFrame.textContent = "";
+    const src = toEmbed(SHOWREEL, false);
+    reelFrame.appendChild(src ? iframeFor(src, "Showreel — Cristina Mora Pérez") : noSignal(t("reel.soon")));
+  }
+  function unmountReel() { reelFrame.textContent = ""; }
+
+  /* ------------------------------------------------------------------
+     Experiencia: timeline estilo Avid
+     ------------------------------------------------------------------ */
+  const now = new Date();
+  const items = EXPERIENCIA.map(function (e, i) {
+    const live = e.hasta === null;
+    return { desde: e.desde, live: live, fin: live ? Infinity : (e.hasta || e.desde), rol: e.rol, proyecto: e.proyecto, tipo: e.tipo, i: i };
+  }).sort(function (a, b) { return a.desde - b.desde || (b.fin - a.fin) || a.i - b.i; });
+  const START = Math.min.apply(null, items.map(function (x) { return x.desde; }));
+  const END = Math.max.apply(null, [now.getFullYear()].concat(items.map(function (x) { return isFinite(x.fin) ? x.fin : x.desde; })));
+  const COLS = END - START + 1;
+  const todayFrac = Math.min(1, Math.max(0, (now.getFullYear() - START + (now.getMonth() + now.getDate() / 31) / 12) / COLS));
+  const laneEnd = [];
+  items.forEach(function (it) {
+    const end = isFinite(it.fin) ? it.fin : END;
+    let lane = laneEnd.findIndex(function (le) { return le < it.desde; });
+    if (lane === -1) { lane = laneEnd.length; laneEnd.push(end); } else laneEnd[lane] = end;
+    it.lane = lane;
+  });
+
+  function yearsLabel(it) {
+    if (it.live) return it.desde + " — " + t("exp.today");
+    return it.fin !== it.desde ? it.desde + " — " + it.fin : String(it.desde);
+  }
+  function span(it) {
+    const left = (it.desde - START) / COLS;
+    const right = it.live ? todayFrac : (it.fin - START + 1) / COLS;
+    return "left: calc(" + (left * 100) + "% + 1px); width: calc(" + ((right - left) * 100) + "% - 2px);";
+  }
+  function header(label, kind, mon) {
+    const h = el("div", { class: "tl-hdr", "aria-hidden": "true" });
+    if (kind !== "tc1") h.appendChild(el("span", { class: "trk-mon" + (mon ? " on" : "") }));
+    h.appendChild(el("span", { class: "trk " + kind }, label));
+    return h;
+  }
+  function wave(seed, years) {
+    let d = "";
+    const N = Math.max(60, Math.round(110 * years));
+    for (let i = 0; i < N; i++) {
+      const x = (i + .5) / N * 1000;
+      const h = 2 + 12 * Math.abs(Math.sin((i + seed) * .41) * Math.cos((i + seed) * .13) + .3 * Math.sin((i + seed) * 1.9));
+      d += "M" + x.toFixed(1) + " " + (17 - h).toFixed(1) + "V" + (17 + h).toFixed(1);
+    }
+    return '<svg viewBox="0 0 1000 34" preserveAspectRatio="none" aria-hidden="true"><path d="' + d +
+      '" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>';
+  }
+
+  const tl = $("tl");
+  tl.style.setProperty("--cols", COLS);
+  let pos = null, posDone = false;
+
+  function renderTimeline() {
+    tl.textContent = "";
+    $("exp-range").textContent = t("exp.range", { a: START });
+
+    const ruler = el("div", { class: "tl-row tl-ruler", "aria-hidden": "true" });
+    ruler.appendChild(header("TC1", "tc1"));
+    const years = el("div", { class: "tl-lane" });
+    for (let y = START; y <= END; y++) years.appendChild(el("span", { class: "tl-year" }, String(y)));
+    ruler.appendChild(years);
+    tl.appendChild(ruler);
+
+    const list = el("div", { role: "list", "aria-label": t("exp.list") });
+    for (let l = laneEnd.length - 1; l >= 0; l--) {          // V1 abajo, como en Avid
+      const row = el("div", { class: "tl-row tl-video" });
+      row.appendChild(header("V" + (l + 1), "v", l === 0));
+      const lane = el("div", { class: "tl-lane" });
+      items.filter(function (it) { return it.lane === l; }).forEach(function (it) {
+        const s = el("div", { class: "seg v" + (it.live ? " live" : ""), role: "listitem", style: span(it),
+          title: yearsLabel(it) + " · " + it.proyecto + " — " + tr(it.rol) });
+        s.appendChild(el("strong", null, it.proyecto));
+        s.appendChild(el("span", null, tr(it.rol)));
+        s.appendChild(el("span", { class: "sr-only" }, yearsLabel(it) + ", " + tr(it.tipo)));
+        lane.appendChild(s);
+      });
+      row.appendChild(lane);
+      list.appendChild(row);
+    }
+    tl.appendChild(list);
+
+    [0, 1].forEach(function (l) {                              // audio enlazado (A1 = V1, A2 = V2)
+      if (l >= laneEnd.length) return;
+      const row = el("div", { class: "tl-row tl-audio", "aria-hidden": "true" });
+      row.appendChild(header("A" + (l + 1), "a", true));
+      const lane = el("div", { class: "tl-lane" });
+      items.filter(function (it) { return it.lane === l; }).forEach(function (it, k) {
+        const s = el("div", { class: "seg a", style: span(it) });
+        const yrs = it.live ? todayFrac * COLS - (it.desde - START) : it.fin - it.desde + 1;
+        s.innerHTML = wave(it.i * 17 + k * 5, yrs);
+        lane.appendChild(s);
+      });
+      row.appendChild(lane);
+      tl.appendChild(row);
+    });
+
+    const posArea = el("div", { class: "tl-pos", "aria-hidden": "true" });
+    pos = el("div", { class: "pos no-anim" });
+    if (posDone) pos.style.left = (todayFrac * 100) + "%";
+    posArea.appendChild(pos);
+    tl.appendChild(posArea);
+
+    const mlist = $("avid-list");
+    mlist.textContent = "";
+    items.forEach(function (it) {
+      const li = el("li");
+      li.appendChild(el("span", { class: "yr" }, yearsLabel(it)));
+      const s = el("div", { class: "seg v" });
+      s.appendChild(el("strong", null, it.proyecto));
+      s.appendChild(el("span", null, tr(it.rol) + " · " + tr(it.tipo)));
+      li.appendChild(s);
+      mlist.appendChild(li);
+    });
+  }
+  function runPosition() {
+    if (posDone) return;
+    posDone = true;
+    if (reduceMotion.matches) { pos.style.left = (todayFrac * 100) + "%"; return; }
+    pos.style.left = "0%";
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        pos.classList.remove("no-anim");
+        pos.style.left = (todayFrac * 100) + "%";
+      });
+    });
+  }
+
+  function renderLangs() {
+    const ul = $("langs-list");
+    ul.textContent = "";
+    IDIOMAS.forEach(function (k) { ul.appendChild(el("li", null, t(k))); });
+  }
+
+  /* ------------------------------------------------------------------
+     Copiar email (sobre mí y pie)
+     ------------------------------------------------------------------ */
+  const MAIL = "crismoraperez99@gmail.com";
+  const copyStatus = $("copy-status");
+  document.querySelectorAll("button.copy[data-i18n='copy']").forEach(function (btn) {
+    let timer = 0;
+    btn.addEventListener("click", function () {
+      const done = function () {
+        btn.textContent = t("copied");
+        copyStatus.textContent = t("copied.sr");
+        clearTimeout(timer);
+        timer = setTimeout(function () { btn.textContent = t("copy"); copyStatus.textContent = ""; }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(MAIL).then(done, function () { window.location.href = "mailto:" + MAIL; });
+      } else {
+        window.location.href = "mailto:" + MAIL;
+      }
+    });
+  });
+
+  /* ------------------------------------------------------------------
+     Navegación: una sección a la vez
+     ------------------------------------------------------------------ */
+  const VIEWS = ["trabajos", "showreel", "sobre-mi"];
+  const ALIAS = { "reel": "showreel" };
+  const COLORS = { "trabajos": "#f2ede3", "showreel": "#d4cdf6", "sobre-mi": "#cce7dd" };
+  const links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  let current = null;
+
+  function resolve(h) { h = ALIAS[h] || h; return VIEWS.indexOf(h) !== -1 ? h : null; }
+  function setTitle() { document.title = t("title." + current) + " — Cristina Mora Pérez"; }
+
+  function show(id, fromUser) {
+    id = resolve(id) || "trabajos";
+    if (id === current) return;
+    const prev = current;
+    current = id;
+    document.body.setAttribute("data-view", id);
+    themeMeta.setAttribute("content", COLORS[id]);
+    VIEWS.forEach(function (v) {
+      const s = $("v-" + v);
+      s.hidden = v !== id;
+      s.classList.remove("is-entering");
+    });
+    const sec = $("v-" + id);
+    if (prev) { void sec.offsetWidth; sec.classList.add("is-entering"); }
+    links.forEach(function (a) {
+      if (a.dataset.view === id) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    setTitle();
+    if (id === "showreel") mountReel(); else unmountReel();
+    if (id === "sobre-mi") runPosition();
+    if (prev) {
+      window.scrollTo(0, 0);
+      if (fromUser) $("h-" + id).focus({ preventScroll: true });
+    }
+  }
+
+  /* ------------------------------------------------------------------
+     Aplicar idioma
+     ------------------------------------------------------------------ */
+  function applyLang(next, save) {
+    lang = LANGS.indexOf(next) !== -1 ? next : "es";
+    if (save) { try { localStorage.setItem("lang", lang); } catch (e) {} }
+    document.documentElement.lang = lang;
+    document.querySelector('meta[name="description"]').setAttribute("content", t("desc"));
+    document.querySelectorAll("[data-i18n]").forEach(function (n) { n.textContent = t(n.getAttribute("data-i18n")); });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (n) { n.setAttribute("aria-label", t(n.getAttribute("data-i18n-aria"))); });
+    document.querySelectorAll(".langs button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    renderWorks();
+    renderTimeline();
+    renderLangs();
+    if (current) setTitle();
+    if (current === "showreel") mountReel();
+  }
+  document.querySelectorAll(".langs button").forEach(function (b) {
+    b.addEventListener("click", function () { if (b.dataset.lang !== lang) applyLang(b.dataset.lang, true); });
+  });
+
+  applyLang(lang, false);
+
+  window.addEventListener("hashchange", function () {
+    const h = resolve(location.hash.slice(1));
+    if (h) show(h, true);
+  });
+  show(location.hash.slice(1), false);
+
+  /* ------------------------------------------------------------------
+     Timecode en directo (cabecera)
+     ------------------------------------------------------------------ */
+  const live = $("live-tc");
+  let raf = 0, t0 = 0, last = -1;
+  function tick(nowMs) {
+    if (!t0) t0 = nowMs;
+    const f = Math.floor((nowMs - t0) / (1000 / FPS));
+    if (f !== last) { live.textContent = tc(f); last = f; }
+    raf = requestAnimationFrame(tick);
+  }
+  function syncMotion() {
+    cancelAnimationFrame(raf);
+    raf = 0;
+    if (reduceMotion.matches) { live.textContent = "00:00:00:00"; t0 = 0; last = -1; }
+    else raf = requestAnimationFrame(tick);
+  }
+  syncMotion();
+  if (reduceMotion.addEventListener) reduceMotion.addEventListener("change", syncMotion);
+  else if (reduceMotion.addListener) reduceMotion.addListener(syncMotion);
+})();
+</script>
+</body>
+</html>
